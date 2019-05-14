@@ -34,5 +34,27 @@ type Planet string
 // Age gives the earth age in days from the given age on the given planet
 func Age(seconds float64, planet Planet) float64 {
 	var convertedAge float64
+	convertedAge = seconds / EarthYearSeconds
+	if planet == "Mercury" {
+		convertedAge = convertedAge / MercuryYearDays
+	}
+	if planet == "Venus" {
+		convertedAge = convertedAge / VenusYearDays
+	}
+	if planet == "Mars" {
+		convertedAge = convertedAge / MarsYearDays
+	}
+	if planet == "Jupiter" {
+		convertedAge = convertedAge / JupiterYearDays
+	}
+	if planet == "Saturn" {
+		convertedAge = convertedAge / SaturnYearDays
+	}
+	if planet == "Uranus" {
+		convertedAge = convertedAge / UranusYearDays
+	}
+	if planet == "Neptune" {
+		convertedAge = convertedAge / NeptuneYearDays
+	}
 	return convertedAge
 }
